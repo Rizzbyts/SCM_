@@ -1,0 +1,20 @@
+# render.yaml — Deploy backend to Render.com (free tier)
+services:
+  - type: web
+    name: supply-chain-api
+    env: node
+    region: singapore
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false   # Set this manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false   # Set this manually in Render dashboard
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: CLIENT_URL
+        sync: false   # Your Vercel frontend URL

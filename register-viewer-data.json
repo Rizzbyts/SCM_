@@ -1,0 +1,6 @@
+{
+  "name": "Viewer User",
+  "email": "viewer@example.com",
+  "password": "viewer123",
+  "role": "viewer"
+}
